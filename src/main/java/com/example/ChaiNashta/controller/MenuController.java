@@ -25,6 +25,7 @@ public class MenuController {
 
 	@PutMapping("/saveMenu")
 	public Menu save(@RequestBody Menu menu) {
+		menu.setMenuId(menu.getRestaurantId());
 		return menuService.save(menu);
 	}
 

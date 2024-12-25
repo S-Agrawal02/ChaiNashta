@@ -39,8 +39,7 @@ public class RestaurantController {
 		if(restaurant.getRestaurantId() == null)
 			restaurant.setRestaurantId(restaurantService.findAllRestaurants().size()+1);
 		restaurant.setMenuId(restaurant.getRestaurantId());
-		restaurantService.save(restaurant);
-		return restaurant;
+		return restaurantService.save(restaurant);
 	}
 
 	@GetMapping("/getRestaurantsByMarketId")

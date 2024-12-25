@@ -10,10 +10,7 @@ import java.util.Optional;
 @Repository
 public interface RestaurantRepository extends MongoRepository<Restaurant,Integer> {
 	Optional<Restaurant> findByRestaurantId(Integer restaurantId);
-
 	List<Restaurant> findByRestaurantIdIn(List<Integer> restaurantIds);
 	List<Restaurant> findByMarketIdsContaining(Integer marketId);
 
-	// update restaurant
-	List<Restaurant> findByMenuId(int menuId);
 }

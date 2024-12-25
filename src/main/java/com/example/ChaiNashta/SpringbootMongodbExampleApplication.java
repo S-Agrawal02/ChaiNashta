@@ -1,4 +1,4 @@
-package com.example.Springboot_Mongodb_Example;
+package com.example.ChaiNashta;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

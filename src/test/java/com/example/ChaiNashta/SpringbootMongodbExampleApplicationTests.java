@@ -1,4 +1,4 @@
-package com.example.Springboot_Mongodb_Example;
+package com.example.ChaiNashta;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

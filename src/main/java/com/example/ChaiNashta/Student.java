@@ -1,4 +1,4 @@
-package com.example.Springboot_Mongodb_Example;
+package com.example.ChaiNashta;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

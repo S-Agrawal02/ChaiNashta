@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Springboot-Mongodb-Example</artifactId>
+	<artifactId>ChaiNashta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Springboot-Mongodb-Example</name>
+	<name>ChaiNashta</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

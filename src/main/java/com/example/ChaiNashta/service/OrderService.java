@@ -9,8 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -23,16 +21,15 @@ public class OrderService {
     private OrderRepository orderRepository;
     @Autowired
     private MongoTemplate mongoTemplate;
-//    @Autowired
-//    private OrderKafkaProducer orderKafkaProducer;
+    @Autowired
+    private OrderKafkaProducer orderKafkaProducer;
 
     public Order save(Order order) {
         order.setOrderId(orderRepository.findAll().size()+1);
         order.setOrderStatus(OrderStatus.NEW);
         order.setOrderTime(new Date());
         // Write to Kafka
-//        orderKafkaProducer.sendNewOrder(order);
-        orderRepository.save(order);
+        orderKafkaProducer.sendNewOrder(order);
         return order;
     }
 

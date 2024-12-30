@@ -4,6 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Document(collection="Order")
 public class Order {
@@ -78,7 +79,7 @@ public class Order {
 		return expectedDeliveryTime;
 	}
 	public void setExpectedDeliveryTime(Integer timeToDeliver) {
-		this.expectedDeliveryTime = new Date(new Date().getTime()+timeToDeliver);
+		this.expectedDeliveryTime = new Date(new Date().getTime() + Optional.ofNullable(timeToDeliver).orElse(0));
 	}
 
 }
